@@ -73,7 +73,7 @@
         (format "%s -attach localhost:%s -sourcepath%s"
                 android-jdb-command-name
                 port
-                (format "%s/src" root))))
+                (format "%s" root))))
    (if (not (string= jdb-command (car android-jdb-history)))
        (push jdb-command android-jdb-history))
    (jdb jdb-command)))
