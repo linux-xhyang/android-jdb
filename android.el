@@ -42,7 +42,7 @@
  (if (or (string-match "XEmacs" emacs-version)
          (>= emacs-major-version 22))
      (read-file-name "Android project root: "
-                     android-project-root
+                     nil
                      nil
                      t
                      nil
@@ -68,7 +68,6 @@
                      t
                      'android-jdb-port-history)
                     (android-read-project-root)))
- (setq android-project-root root)
  (let ((jdb-command
         (format "%s -attach localhost:%s -sourcepath%s"
                 android-jdb-command-name
